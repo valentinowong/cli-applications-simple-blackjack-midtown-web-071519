@@ -2,5 +2,6 @@ require_relative "blackjack.rb"
 
 def runner
   welcome
-  hit?(current_card_total) = initial_round
+  initial_round
+  hit?(current_card_total)
 end
