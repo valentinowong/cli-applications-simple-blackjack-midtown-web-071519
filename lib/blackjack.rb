@@ -37,13 +37,13 @@ def hit?(current_card_total)
   elsif player_input == 's'
      current_card_total
   else 
-    invalid_command(current_card_total)
+    invalid_command
+    prompt_user
   end
 end
 
-def invalid_command(current_card_total)
+def invalid_command
   puts "Please enter a valid command"
-  hit?(current_card_total)
 end
 
 #####################################################
