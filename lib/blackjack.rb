@@ -38,14 +38,12 @@ def hit?(current_card_total)
      current_card_total
   else 
     invalid_command(current_card_total)
-    prompt_user
-    player_input = get_user_input
   end
 end
 
 def invalid_command(current_card_total)
   puts "Please enter a valid command"
-  
+  hit?(current_card_total)
 end
 
 #####################################################
