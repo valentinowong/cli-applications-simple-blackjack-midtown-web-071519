@@ -29,10 +29,6 @@ def initial_round
   card_total
 end
 
-def invalid_command
-  puts "Please enter a valid command"
-end
-
 def hit?(current_card_total)
   prompt_user
   player_input = get_user_input
@@ -41,10 +37,13 @@ def hit?(current_card_total)
   elsif player_input == 's'
      current_card_total
   else 
-    invalid_command
-    prompt_user
-    player_input = get_user_input
+    invalid_command(current_card_total)
   end
+end
+
+def invalid_command(current_card_total)
+  puts "Please enter a valid command"
+  hit?(current_card_total)
 end
 
 #####################################################
