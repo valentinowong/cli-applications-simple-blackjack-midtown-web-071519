@@ -53,6 +53,8 @@ end
 def runner
   welcome
   current_card_total = initial_round
+  until 
+  end
   hit?(initial_round)
 end
     
